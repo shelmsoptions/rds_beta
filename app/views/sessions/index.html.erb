@@ -1,0 +1,74 @@
+<h1>rds_beta</h1>
+<div class="container red">
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <p><%= error %></p>
+    <% end %>
+  <% end %>
+
+</div>
+<div class="login-half">
+  <div class="container">
+    <h3>Register</h3>
+    <%= form_for @user, method: :post do |f| %>
+
+    <div class="form-group">
+      <%= f.label 'First Name', :class => "control-label" %>
+      <%= f.text_field :first_name, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Last Name', :class => "control-label" %>
+      <%= f.text_field :last_name, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Alias', :class => "control-label" %>
+      <%= f.text_field :alias, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Email', :class => "control-label" %>
+      <%= f.text_field :email, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Password', :class => "control-label" %>
+      <%= f.password_field :password, :class => "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label 'Confirm Password', :class => "control-label" %>
+      <%= f.password_field :password_confirmation, :class => "form-control" %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Register", :class => "btn btn-secondary" %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<div class="login-half">
+  <div class="container">
+    <h3>Log In</h3>
+    <span class="red"><%= flash[:alert] %></span>
+    <!-- https://www.railstutorial.org/book/basic_login -->
+    <!-- https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=form_for+session+create&* -->
+    <%= form_for(:session, url: sessions_path) do |f| %>
+      <div class="form-group">
+        <%= f.label 'Email', :class => "control-label" %>
+        <%= f.text_field :email, :class => "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label 'Password', :class => "control-label" %>
+        <%= f.password_field :password, :class => "form-control" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit "Login", :class => "btn btn-secondary" %>
+      </div>
+    <% end %>
+
+  </div>
+</div>

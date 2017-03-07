@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Characters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Hit points</th>
+      <th>Life</th>
+      <th>Speed</th>
+      <th>Initiative</th>
+      <th>Strength</th>
+      <th>Experience</th>
+      <th>Charisma</th>
+      <th>Intimidation</th>
+      <th>Weapon proficiency</th>
+      <th>Weapon accuracy</th>
+      <th>Tolerance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td><%= character.user %></td>
+        <td><%= character.name %></td>
+        <td><%= character.gender %></td>
+        <td><%= character.hit_points %></td>
+        <td><%= character.life %></td>
+        <td><%= character.speed %></td>
+        <td><%= character.initiative %></td>
+        <td><%= character.strength %></td>
+        <td><%= character.experience %></td>
+        <td><%= character.charisma %></td>
+        <td><%= character.intimidation %></td>
+        <td><%= character.weapon_proficiency %></td>
+        <td><%= character.weapon_accuracy %></td>
+        <td><%= character.tolerance %></td>
+        <td><%= link_to 'Show', character %></td>
+        <td><%= link_to 'Edit', edit_character_path(character) %></td>
+        <td><%= link_to 'Destroy', character, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Character', new_character_path %>

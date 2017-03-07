@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @character.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @character.name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @character.gender %>
+</p>
+
+<p>
+  <strong>Hit points:</strong>
+  <%= @character.hit_points %>
+</p>
+
+<p>
+  <strong>Life:</strong>
+  <%= @character.life %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @character.speed %>
+</p>
+
+<p>
+  <strong>Initiative:</strong>
+  <%= @character.initiative %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @character.strength %>
+</p>
+
+<p>
+  <strong>Experience:</strong>
+  <%= @character.experience %>
+</p>
+
+<p>
+  <strong>Charisma:</strong>
+  <%= @character.charisma %>
+</p>
+
+<p>
+  <strong>Intimidation:</strong>
+  <%= @character.intimidation %>
+</p>
+
+<p>
+  <strong>Weapon proficiency:</strong>
+  <%= @character.weapon_proficiency %>
+</p>
+
+<p>
+  <strong>Weapon accuracy:</strong>
+  <%= @character.weapon_accuracy %>
+</p>
+
+<p>
+  <strong>Tolerance:</strong>
+  <%= @character.tolerance %>
+</p>
+
+<%= link_to 'Edit', edit_character_path(@character) %> |
+<%= link_to 'Back', characters_path %>
