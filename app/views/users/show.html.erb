@@ -2,28 +2,31 @@
 <div class="view-half">
   <div class="container">
 
-    <div class="form-group" readonly>
+    <div class="form-control form-group" readonly>
       <strong>First name:</strong>
-      <div class="form-control">
+      <div class="form-control form-group">
         <%= @user.first_name %>
       </div>
 
       <strong>Last name:</strong>
-      <div class="form-control">
+      <div class="form-control form-group">
         <%= @user.last_name %>
       </div>
 
+      <strong>Alias:</strong>
+      <div class="form-control form-group">
+        <%= @user.alias %>
+      </div>
+
       <strong>Email:</strong>
-      <div class="form-control">
+      <div class="form-control form-group">
         <%= @user.email %>
       </div>
 
-      <strong>Alias:</strong>
-      <div class="form-control">
-        <%= @user.alias %>
+      <div class="form-actions">
+        <%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-secondary" %> |
+        <%= link_to 'Back', users_path, :class => "btn btn-secondary" %>
       </div>
-      <%= link_to 'Edit', edit_user_path(@user) %> |
-      <%= link_to 'Back', users_path %>
     </div>
   </div>
 </div>

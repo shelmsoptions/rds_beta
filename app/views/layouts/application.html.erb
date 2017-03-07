@@ -10,7 +10,7 @@
 
   <body>
     <% if session[:user_id] %>
-      <a href="/sessions/<%= session[:user_id] %>" data-method="delete">Logout</a>
+      <a href="/sessions/<%= session[:user_id] %>" class="btn btn-secondary" data-method="delete">Logout</a>
     <% end %>
     <%= yield %>
   </body>
