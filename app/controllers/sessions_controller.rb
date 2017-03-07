@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     puts "user =", user
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to users_path(session[:user_id])
+      redirect_to user_path(session[:user_id])
     else
       flash[:alert] = "Credentials incorrect or not found"
       redirect_to '/'

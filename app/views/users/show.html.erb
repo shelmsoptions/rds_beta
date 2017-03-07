@@ -1,24 +1,35 @@
 <p id="notice"><%= notice %></p>
+<div class="view-half">
+  <div class="container">
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+    <div class="form-group" readonly>
+      <strong>First name:</strong>
+      <div class="form-control">
+        <%= @user.first_name %>
+      </div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+      <strong>Last name:</strong>
+      <div class="form-control">
+        <%= @user.last_name %>
+      </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+      <strong>Email:</strong>
+      <div class="form-control">
+        <%= @user.email %>
+      </div>
 
-<p>
-  <strong>Alias:</strong>
-  <%= @user.alias %>
-</p>
+      <strong>Alias:</strong>
+      <div class="form-control">
+        <%= @user.alias %>
+      </div>
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="view-half">
+  <div class="container">
+    Character table here
+  </div>
+</div>
