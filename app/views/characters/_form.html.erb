@@ -11,8 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %>
+  <div class="field" readonly>
+    <%= f.label :user_id, "Owner: " %>
     <%= f.text_field :user_id %>
   </div>
 
@@ -28,6 +28,7 @@
 
   <div class="field">
     <%= f.label :hit_points %>
+    <button type="button" name="button">Roll</button>
     <%= f.number_field :hit_points %>
   </div>
 
