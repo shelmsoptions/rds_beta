@@ -20,7 +20,7 @@ class UsersController < ApplicationController
       if @user.save
         flash[:notice] = 'User Registered!'
         session[:user_id] = @user.id
-        redirect_to user_path
+        redirect_to user_path(session[:user_id])
       else
         flash[:errors] = @user.errors.full_messages
         redirect_to '/'
